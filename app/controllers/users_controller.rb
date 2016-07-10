@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(post_params)
+    @user = User.new(user_params)
 
     if @user.save
       render json:
@@ -25,8 +25,8 @@ class UsersController < ApplicationController
 
   private
 
-  def post_params
-    params.require(:dev_unique_id).permit(:serv_time_creaton, :days_completed, :device_push_id, :name)
+  def user_params
+    params.require(:user).permit(:dev_unique_id, :serv_time_creaton, :days_completed, :device_push_id, :name)
   end
 
 end
