@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'users/index'
-  post 'users/create'
+  post 'users#create'
 
   root 'users#index'
 
