@@ -6,10 +6,14 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def create
-    @mUser = User.new(user_params)
+  def new
+    @user = User.new
+  end
 
-    if @mUser.save
+  def create
+    @user = User.new(user_params)
+
+    if @user.save
       render json:
       {
         status: 200,
@@ -27,7 +31,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:mUser).permit(:dev_unique_id, :serv_time_creaton, :days_completed, :device_push_id, :name)
+    params.permit(:dev_unique_id, :serv_time_creaton, :days_completed, :device_push_id, :name)
   end
 
 end
