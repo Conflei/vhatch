@@ -6,9 +6,9 @@ class UsersController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @user = User.new(post_params)
 
-    if @post.save
+    if @user.save
       render json:
       {
         status: 200,
