@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:create]
-  before_action :link_params,only: [:create]
+  before_action :user_params,only: [:create]
 
   def index
     @users = User.all
