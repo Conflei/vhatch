@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dev_unique_id: 
+  days_completed: 
+  serv_time_creaton: 
+  device_push_id: 
+  name: MyString
+
+two:
+  dev_unique_id: 
+  days_completed: 
+  serv_time_creaton: 
+  device_push_id: 
+  name: MyString

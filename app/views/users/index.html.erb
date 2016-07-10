@@ -1,0 +1,13 @@
+<h1>All The Users</h1>
+<%@users.each do |mUser| %>
+<h2>Name: <%=mUser.name%></h2>
+<br>
+<h3>Server Time Creation: <%=mUser.serv_time_creaton%></h3>
+<br>
+<h3>Days Completed: <%= mUser.days_completed%></h3>
+<br>
+<h4>Device Unique ID: <%=mUser.dev_unique_id%></h4>
+<br>
+<h4>Device Push Notifications ID: <%=mUser.device_push_id%></h4>
+<hr>
+<%end%>
