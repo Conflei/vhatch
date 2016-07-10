@@ -26,7 +26,7 @@ class UsersController < ApplicationController
   private
 
   def post_params
-    params.require(:user).permit(:dev_unique_id, :serv_time_creaton, :days_completed, :device_push_id, :name)
+    params.require(:dev_unique_id).permit(:serv_time_creaton, :days_completed, :device_push_id, :name)
   end
 
 end
