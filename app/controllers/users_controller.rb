@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   end
 
   def exists
-    if User.exists?(params[:dev_unique_id])
+    if User.where(:dev_unique_id => params[:dev_unique_id]).any?
       render json:
       {
         status: 200,
