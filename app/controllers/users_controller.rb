@@ -28,6 +28,22 @@ class UsersController < ApplicationController
     end
   end
 
+  def exists
+    if User.exists?(params[:dev_unique_id])
+      render json:
+      {
+        status: 200,
+        query: "true"
+      }
+    else
+      render json:
+      {
+        status: 200,
+        query: "false"
+      }
+    end
+  end
+
   private
 
   def user_params

@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   get 'users/index'
+  get 'users/exists' => 'users#exists'
+  
   post 'users/create' => 'users#create'
+
 
   root 'users#index'
 
